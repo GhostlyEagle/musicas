@@ -1,38 +1,179 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: url('https://openseauserdata.com/files/cc8110c53d1e2273dc856a7053bf9fa8.png') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 195, 255, 0.7);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(59, 117, 131, 0.95);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  z-index: 10;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.PlaylistApp {
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.App-header {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-header h1 {
+  font-size: 2.5em;
+  color: #000000;
+}
+
+.App-header h2 {
+  font-size: 1.5em;
+  color: #ecf0f1;
+  margin: 5px 0;
+}
+
+.App-header p {
+  font-size: 1.1em;
+  color: #ecf0f1;
+  margin: 0;
+}
+
+.entrada-form {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.entrada-form input[type="text"] {
+  padding: 15px;
+  border: 2px solid #ecf0f1;
+  border-radius: 25px;
+  background-color: #34495e;
+  color: #ecf0f1;
+  width: 250px;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.entrada-form input[type="text"]:focus {
+  border-color: #00d9ff;
+}
+
+.entrada-form button {
+  padding: 15px 25px;
+  background-color: #12d9f3;
+  color: #2c3e50;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.entrada-form button:hover {
+  background-color: #00ffff;
+  transform: translateY(-2px);
+}
+
+.notificacao {
+  text-align: center;
+  color: #00eeff;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.lista-playlist {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+}
+
+.musica-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #34728a;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.musica-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.musica-titulo {
+  font-size: 1.2em;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.acoes {
+  display: flex;
+  gap: 10px;
+}
+
+.acoes button {
+  padding: 6px 12px;
+  border-radius: 5px;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.acoes button:hover {
+  background-color: #34495e;
+  transform: translateY(-1px);
+}
+
+li input[type="text"] {
+  padding: 8px;
+  width: 60%;
+  background-color: #2c3e50;
+  border: 2px solid #ecf0f1;
+  border-radius: 25px;
+  color: #ecf0f1;
+  font-size: 16px;
+}
+
+.footer {
+  margin-top: auto;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(44, 62, 80, 0.9);
+  color: #ecf0f1;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid hsl(0, 0%, 0%);
 }
